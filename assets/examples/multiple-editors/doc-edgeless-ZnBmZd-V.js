@@ -1,0 +1,2 @@
+import"../../static-aza_T-_E.js";import{I as o,J as d,K as s}from"../../affine-qBef04zk.js";import"../../if-defined-ijbxtOj-.js";const e=document.createElement("div");e.style.display="flex";e.style.height="100%";e.style.width="100%";document.body.appendChild(e);const a=await o().init(),t=new d;t.page=a;t.style.flex="2";t.style.borderRight="1px solid #ccc";e.appendChild(t);const l=await o().init(),i=new s;i.page=l;i.style.flex="3";i.style.borderLeft="1px solid #ccc";e.appendChild(i);
+//# sourceMappingURL=doc-edgeless-ZnBmZd-V.js.map
