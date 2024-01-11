@@ -1,0 +1,6 @@
+import{Z as i,a2 as r,S as u,W as m}from"../static-aza_T-_E.js";const k=i({flavour:"todo:container",metadata:{version:1,role:"hub",tag:r`todo-container`}}),p=i({flavour:"todo:item",props:()=>({content:"",done:!1}),metadata:{version:1,role:"content",tag:r`todo-item`}}),B=[k,p];function v(){const o=new u;o.register(B);const n=new m({schema:o}).createPage({id:"page:home"});return n.addBlock("todo:container"),n}function f(o,t){const n=document.querySelector(".input-add"),a=document.querySelector(".button-add"),d=document.querySelector(".container");a.addEventListener("click",()=>{const e=n.value;if(e!==""){const c=o.addBlock("todo:item",{content:e},t);o.getBlockById(c).propsUpdated.on(()=>{l(t)}),n.value="",n.focus()}}),d.addEventListener("click",e=>{const c=e.target;if(c.classList.contains("button-done")){const s=o.getBlockById(c.parentElement?.dataset.id);o.updateBlock(s,{done:!s.done})}})}function g(o){return`<div class="todo-item" data-id="${o.id}">
+  <button class="button-done">done</button>
+  <span class="content ${o.done?"done":""}">${o.content}</span>
+</div>`}function l(o){const n=o.children.map(d=>g(d)).join(`
+`),a=document.querySelector(".container");a.innerHTML=n}function h(){const o=v(),t=o.getBlockByFlavour("todo:container")[0];f(o,t),t.childrenUpdated.on(()=>{l(t)})}h();
+//# sourceMappingURL=store-gjdppMG3.js.map
